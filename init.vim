@@ -74,6 +74,10 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 let g:deoplete#enable_at_startup = 1
 
+if has('win32')
+  let g:python3_host_prog = 'C:\Program Files\Python38\python.exe'
+endif
+
 " Code linting
 let g:neomake_python_enabled_makers = ['pylint']
 
