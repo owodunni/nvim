@@ -1,7 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
 set ignorecase              " case insensitive matching
-set mouse=v                 " middle-click paste with mouse
+set mouse=a
 set hlsearch                " highlight search results
 set tabstop=2               " number of columns occupied by a tab character
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
@@ -88,3 +88,6 @@ let g:neomake_python_enabled_makers = ['pylint']
 set background=dark
 colorscheme gruvbox
 
+" Markdown preview
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 0

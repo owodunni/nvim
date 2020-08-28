@@ -1,4 +1,5 @@
 # nvim
+How to setup [Neovim](https://neovim.io/)
 
 ## Setup
 
@@ -11,6 +12,10 @@ Symbolic link init.vim to ~/.config/init.vim
 
 ### Windows
 Getting started on [Windows](https://jdhao.github.io/2018/11/15/neovim_configuration_windows/)
+
+## Tutorials
+
+Great nvim [tutorials.](https://www.gilesorr.com/blog/vim-tips-intro.html)
 
 ## Plugins
 
