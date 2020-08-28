@@ -9,6 +9,8 @@ git clone git@github.com:owodunni/nvim.git ~/.config/nvim
 
 Symbolic link init.vim to ~/.config/init.vim
 
+### Windows
+Getting started on [Windows](https://jdhao.github.io/2018/11/15/neovim_configuration_windows/)
 
 ## Plugins
 
