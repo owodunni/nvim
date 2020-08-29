@@ -89,5 +89,4 @@ set background=dark
 colorscheme gruvbox
 
 " Markdown preview
-let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 0
