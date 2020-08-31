@@ -1,0 +1,4 @@
+# Source this file from zsh to get prober fzf and rg settings
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+alias nvimconfig="nvim $HOME/.config/nvim/init.vim"
