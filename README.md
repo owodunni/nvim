@@ -51,3 +51,40 @@ Articles
 Install:
 * [fzf](https://github.com/junegunn/fzf)
 * [ripgrep](https://github.com/BurntSushi)
+*
+# Vim cheat sheet
+
+## Moving in file:
+* `<c-o>` and `<c-i>` moves back and forward from once you came. Usefull after searching.
+
+## Search and replace:
+
+To change every occurrence of a character string between two lines, type
+~~~ cmd
+     :#,#s/old/new/g
+~~~
+where #,# are the line numbers of the range of lines where the substitution is to be done.
+
+Type
+~~~ cmd
+    :%s/old/new/g
+~~~
+to change every occurrence in the whole file.
+
+Type
+~~~ cmd
+    :%s/old/new/gc
+~~~
+to find every occurrence in the whole file, with a prompt whether to substitute or not.
+
+## External command
+
+To execute a external command
+```
+:!cmd
+```
+
+To execute a external command and paste the result in current doc:
+```
+:r !cmd
+```
