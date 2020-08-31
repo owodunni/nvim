@@ -67,6 +67,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " jedi-vim
 let g:jedi#completions_enabled = 0
