@@ -1,0 +1,14 @@
+ZSH_THEME="wedisagree"
+
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+source $HOME/.config/nvim/alias.sh
+source $HOME/.config/nvim/nvim_profile
+source $HOME/.local/venv/bin/activate
