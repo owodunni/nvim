@@ -1,13 +1,23 @@
-ZSH_THEME="wedisagree"
+ZSH_THEME="theunraveler"
 
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  gradle
+  )
 
+
+export LC_ALL="en_US.UTF-8"
 source $ZSH/oh-my-zsh.sh
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 source $HOME/.config/nvim/alias.sh
 source $HOME/.config/nvim/nvim_profile

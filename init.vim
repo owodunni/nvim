@@ -93,3 +93,9 @@ colorscheme gruvbox
 
 " Markdown preview
 let g:mkdp_auto_close = 0
+
+" FZF file search
+nnoremap \ :Rg<CR>
+nnoremap <C-T> :Files<cr>
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>s :BLines<cr>
