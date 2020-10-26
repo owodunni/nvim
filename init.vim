@@ -61,6 +61,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
+
+Plug 'TovarishFin/vim-solidity'
 call plug#end()
 
 " airline
@@ -99,3 +101,6 @@ nnoremap \ :Rg<CR>
 nnoremap <C-T> :Files<cr>
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <Leader>s :BLines<cr>
+
+" Use system clipboard
+set clipboard=unnamedplus
