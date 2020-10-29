@@ -62,6 +62,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
+Plug 'pangloss/vim-javascript'
 Plug 'TovarishFin/vim-solidity'
 call plug#end()
 
