@@ -109,3 +109,9 @@ nnoremap <Leader>s :BLines<cr>
 
 " Use system clipboard
 set clipboard=unnamedplus
+
+" one can set a personal spelling file. Pressing zg on a word will add it.
+" http://thejakeharding.com/tutorial/2012/06/13/using-spell-check-in-vim.html
+" set spellfile=file/in/version/control/en.utf-8.add
+set spell
+set spelllang=en_us
