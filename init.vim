@@ -80,6 +80,7 @@ Plug 'sohkai/syntastic-local-solhint'
 
 " Golang
 Plug 'fatih/vim-go'
+Plug 'sebdah/vim-delve'
 call plug#end()
 
 " airline

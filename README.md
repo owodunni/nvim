@@ -40,6 +40,12 @@ I followed the following guide for setting up [Python.](https://jdhao.github.io/
 * <leader>n: show the usage of a name in current file
 * <leader>r: rename a name
 
+## Golang
+I followed the following guide to setup [Golang](https://medium.com/@goelankit/setting-up-neovim-for-golang-on-ubuntu-18-04-aa3cc2f088f7) with some modifications.
+
+For Go I also set up [delve](https://github.com/derekparker/delve/blob/master/Documentation/cli/README.md)
+as debugger.
+
 ## fzf + ripgrep
 FzF and ripgrep promise increased productivity.
 
