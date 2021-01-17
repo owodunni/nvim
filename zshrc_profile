@@ -22,7 +22,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 source $HOME/.config/nvim/alias.sh
 source $HOME/.config/nvim/nvim_profile
-source $HOME/.local/venv/bin/activate
 
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
