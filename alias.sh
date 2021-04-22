@@ -106,3 +106,7 @@ function gup () {
 
 alias gupm="gup master"
 
+# microk8s
+
+alias kubectl='microk8s kubectl'
+alias helm='microk8s helm3'
