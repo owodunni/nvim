@@ -5,6 +5,8 @@ alias rc="source ~/.zshrc"
 #   Git
 # --------------------------------------------------------------
 
+master="dev"
+
 # Show git dirty state in bash prompt
 GIT_PS1_SHOWDIRTYSTATE=" "
 
@@ -21,13 +23,13 @@ alias gmff="git merge --ff-only"
 # git rebase
 alias gr="git rebase"
 alias gri="git rebase -i"
-alias grim="git rebase -i master"
-alias grm="git rebase master"
+alias grim="git rebase -i $master"
+alias grm="git rebase $master"
+
 # Just rewrite the branch interactively, do not move the branch
-alias grib='git rebase -i $(git merge-base master HEAD)'
+alias grib='git rebase -i $(git merge-base $master HEAD)'
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
-
 # git log
 alias gl="git log --graph --oneline --decorate --branches"
 
@@ -55,8 +57,8 @@ alias dirdiff="git difftool --dir-diff"
 
 # git whole branch directory diff in e.g. Meld
 function branchdiff {
-    ancestor=$(git merge-base master HEAD)
-    echo "Ancestor between HEAD and master is $ancestor"
+    ancestor="$(git merge-base $master HEAD)"
+    echo "Ancestor between HEAD and $master is $ancestor"
     echo "Starting diff tool..."
     git difftool --dir-diff $ancestor..HEAD --
 }
@@ -104,7 +106,36 @@ function gup () {
     git pull origin --ff-only
 }
 
-alias gupm="gup master"
+alias gupm="gup $master"
+
+function gsplit () {
+    message="$(git log --pretty=format:'%s' -n1)"
+    if [ `git status --porcelain --untracked-files=no | wc -l` = 0 ]
+    then
+       git reset --soft HEAD^
+    fi
+    git status --porcelain --untracked-files=no | while read stat file;
+    do
+       echo $stat $file
+       shaid="$(git log -n 1 --pretty=format:%H -- $file)"
+
+       if [ "$stat" = "M" ]
+       then
+          git add $file
+          git commit -n $file --fixup $shaid
+       elif [ "$stat" = "A" ]
+       then
+          git add $file
+          git commit -n $file -m "added $file: $message"
+       elif [ "$stat" = "D" ]
+       then
+          git rm $file
+          git commit -n $file --fixup $shaid
+       else
+          echo "unknown status $file"
+       fi
+    done
+}
 
 # microk8s
 
