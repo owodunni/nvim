@@ -64,6 +64,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
+Plug 'rust-lang/rust.vim'
+
 "These plugins gave me funcy behaviours might have to disable these when not 
 ".js or .sol files
 "Plug 'pangloss/vim-javascript'
@@ -115,3 +117,6 @@ set clipboard=unnamedplus
 " set spellfile=file/in/version/control/en.utf-8.add
 set spell
 set spelllang=en_us
+
+" Rust
+let g:rustfmt_autosave = 1
