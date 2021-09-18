@@ -1,0 +1,16 @@
+autoconf
+automake
+cmake
+htop
+imagewriter
+keepass
+make
+neovim
+opera
+python-pip
+vi
+vim
+wget
+which
+yay
+zsh

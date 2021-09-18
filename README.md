@@ -1,4 +1,4 @@
-# nvim
+# README
 How to setup [Neovim](https://neovim.io/)
 
 ## Setup
@@ -87,4 +87,12 @@ To execute a external command
 To execute a external command and paste the result in current doc:
 ```
 :r !cmd
+```
+
+## Arch
+
+To install our favorite packages run:
+
+```
+sudo pacman -S - < pkglist.txt
 ```
