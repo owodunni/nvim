@@ -89,7 +89,23 @@ To execute a external command and paste the result in current doc:
 :r !cmd
 ```
 
-## Arch
+## Popupmenu
+
+The popup menu is useful for autocompletions.
+
+Here are some useful shortcuts:
+
+```
+Ctrl+N/Ctrl+P - open popup menu and cycle through menu
+```
+
+```
+Ctrl+Y/Ctrl+E - accept/cancel menu
+```
+
+[More info](https://newbedev.com/select-an-item-in-vim-autocomplete-list-without-inserting-line-break)
+
+# Arch
 
 To install our favorite packages run:
 
