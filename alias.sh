@@ -5,7 +5,7 @@ alias rc="source ~/.zshrc"
 #   Git
 # --------------------------------------------------------------
 
-master="dev"
+master="master"
 
 # Show git dirty state in bash prompt
 GIT_PS1_SHOWDIRTYSTATE=" "
