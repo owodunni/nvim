@@ -26,3 +26,5 @@ source $HOME/.config/nvim/nvim_profile
 export PATH="$HOME/.local/bin:$PATH"
 
 alias zshconfig="nvim $HOME/.config/nvim/zshrc_profile"
+
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
