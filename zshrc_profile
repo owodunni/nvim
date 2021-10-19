@@ -24,3 +24,5 @@ export NVM_DIR="$HOME/.nvm"
 source $HOME/.config/nvim/alias.sh
 source $HOME/.config/nvim/nvim_profile
 export PATH="$HOME/.local/bin:$PATH"
+
+alias zshconfig="nvim $HOME/.config/nvim/zshrc_profile"
