@@ -28,3 +28,9 @@ export PATH="$HOME/.local/bin:$PATH"
 alias zshconfig="nvim $HOME/.config/nvim/zshrc_profile"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+
+export PATH=$PATH:$ANDROID_HOME/emulator:$PATH
+export PATH=$PATH:$ANDROID_HOME/tools:$PATH
+export PATH=$PATH:$ANDROID_HOME/tools/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
