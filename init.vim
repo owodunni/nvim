@@ -71,7 +71,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
 Plug 'rust-lang/rust.vim'
-Plug 'espizo/vim-gitcommit-issue-id'
+Plug 'owodunni/vim-gitcommit-issue-id'
 
 "These plugins gave me funcy behaviours might have to disable these when not 
 ".js or .sol files
