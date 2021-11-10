@@ -8,7 +8,11 @@ Clone repository:
 git clone git@github.com:owodunni/nvim.git ~/.config/nvim
 ```
 
-Symbolic link init.vim to ~/.config/init.vim
+Install packages:
+
+```
+sudo pacman -S --needed - < pkglist.txt
+```
 
 ### Windows
 Getting started on [Windows](https://jdhao.github.io/2018/11/15/neovim_configuration_windows/)
@@ -31,6 +35,14 @@ Install plugins:
 :UpdateRemotePlugins
 :q!
 ```
+
+## Javascript
+Install the following
+
+```
+npm i -g eslint eslint-plugin-vue
+```
+
 
 ## Python
 I followed the following guide for setting up [Python.](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
@@ -104,11 +116,3 @@ Ctrl+Y/Ctrl+E - accept/cancel menu
 ```
 
 [More info](https://newbedev.com/select-an-item-in-vim-autocomplete-list-without-inserting-line-break)
-
-# Arch
-
-To install our favorite packages run:
-
-```
-sudo pacman -S - < pkglist.txt
-```

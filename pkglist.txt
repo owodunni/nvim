@@ -14,3 +14,5 @@ wget
 which
 yay
 zsh
+fzf
+ripgrep
