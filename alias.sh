@@ -108,6 +108,8 @@ function gup () {
 
 alias gupm="gup $master"
 
+alias cop="!git checkout $1 && git pull && git submodule foreach --recursive git pull origin master &&:"
+
 function gsplit () {
     message="$(git log --pretty=format:'%s' -n1)"
     if [ `git status --porcelain --untracked-files=no | wc -l` = 0 ]
