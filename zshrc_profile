@@ -1,21 +1,9 @@
-ZSH_THEME="theunraveler"
-
-HYPHEN_INSENSITIVE="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
-
-plugins=(
-  git
-  zsh-autosuggestions
-  gradle
-  )
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
 export LC_ALL="en_US.UTF-8"
-source $ZSH/oh-my-zsh.sh
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
