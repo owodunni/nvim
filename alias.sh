@@ -146,3 +146,4 @@ alias helm='microk8s helm3'
 
 #gradle
 alias gw=gradle
+alias ll='ls -al'
