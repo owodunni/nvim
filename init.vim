@@ -175,7 +175,7 @@ set number
 let no_buffers_menu=1
 colorscheme gruvbox
 
-" Better command line completion 
+" Better command line completion
 set wildmenu
 
 " mouse support
@@ -200,7 +200,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -208,7 +208,7 @@ else
       set term=xterm-256color
     endif
   endif
-  
+
 endif
 
 
@@ -375,9 +375,6 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
 
-" ale
-let g:ale_linters = {}
-
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -453,6 +450,15 @@ nnoremap <space> za
 
 " terminal
 :tnoremap <Esc> <C-\><C-n>
+
+" ale
+let g:ale_linters = {}
+let g:ale_fixers = {
+      \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \  'javascript': ['prettier'],
+      \  'vue': ['prettier'],
+      \}
+let g:ale_fix_on_save = 1
 
 "*****************************************************************************
 "*****************************************************************************
