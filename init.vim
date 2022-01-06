@@ -10,10 +10,10 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = ""
+let g:vim_bootstrap_langs = "javascript"
 let g:vim_bootstrap_editor = "neovim"				" nvim or vim
 let g:vim_bootstrap_theme = "gruvbox"
-let g:vim_bootstrap_frams = ""
+let g:vim_bootstrap_frams = "vuejs"
 
 if !filereadable(vimplug_exists)
   if !executable(curl_exists)
@@ -75,6 +75,14 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'owodunni/vim-gitcommit-issue-id'
+
+" javascript
+"" Javascript Bundle
+Plug 'jelera/vim-javascript-syntax'
+
+" vuejs
+Plug 'posva/vim-vue'
+Plug 'leafOfTree/vim-vue-plugin'
 "*****************************************************************************
 "*****************************************************************************
 
@@ -84,19 +92,12 @@ if filereadable(expand("~/.config/nvim/local_bundles.vim"))
 endif
 
 call plug#end()
-
-" airline
-let g:airline_theme='bubblegum'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" Required:
+filetype plugin indent on
 
 " nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-" jedi-vim
-let g:jedi#completions_enabled = 0
-let g:jedi#use_splits_not_buffers = "right"
-
 
 " colorscheme
 set background=dark
@@ -111,9 +112,6 @@ nnoremap <C-T> :Files<cr>
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <Leader>s :BLines<cr>
 
-" Use system clipboard
-set clipboard=unnamedplus
-
 " one can set a personal spelling file. Pressing zg on a word will add it.
 " http://thejakeharding.com/tutorial/2012/06/13/using-spell-check-in-vim.html
 " set spellfile=file/in/version/control/en.utf-8.add
@@ -123,6 +121,15 @@ set spelllang=en_us
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************"
+
+"" Custom
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching brackets.
+set ignorecase              " case insensitive matching
+set autoindent              " indent a new line the same amount as the line just typed
+set cc=80                   " set an 80 column border for good coding style
+
+
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -133,9 +140,9 @@ set ttyfast
 set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 "" Map leader to ,
@@ -251,6 +258,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 "*****************************************************************************
 "" Abbreviations
@@ -322,10 +330,6 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-
-"" Split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
@@ -422,10 +426,14 @@ noremap <leader>c :bd<CR>
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" splitting https://neovim.io/doc/user/windows.html
+set splitbelow
+set splitright
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -442,39 +450,26 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "" Custom configs
 "*****************************************************************************
 
-set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching brackets.
-set ignorecase              " case insensitive matching
-set mouse=a
-set hlsearch                " highlight search results
-set tabstop=2               " number of columns occupied by a tab character
-set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
-set expandtab               " converts tabs to white space
-set shiftwidth=2            " width for autoindents
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-set cc=80                   " set an 80 column border for good coding style
-filetype plugin indent on   " allows auto-indenting depending on file type
-syntax on                   " syntax highlighting
+" javascript
+let g:javascript_enable_domhtmlcss = 1
 
-:let mapleader = ","
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
+augroup END
 
-" splitting https://neovim.io/doc/user/windows.html
-set splitbelow
-set splitright
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" vuejs
+" vim vue
+let g:vue_disable_pre_processors=1
+" vim vue plugin
+let g:vim_vue_plugin_load_full_syntax = 1
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 
 " Popup menu
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
