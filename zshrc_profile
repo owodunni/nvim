@@ -27,3 +27,6 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 # Go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
+
+# Snap
+export PATH=$PATH:/var/lib/snapd/snap/bin

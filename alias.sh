@@ -114,7 +114,7 @@ function gsplit () {
     message="$(git log --pretty=format:'%s' -n1)"
     if [ `git status --porcelain --untracked-files=no | wc -l` = 0 ]
     then
-       git reset --soft HEAD^
+       git reset --soft HEAD~
     fi
     git status --porcelain --untracked-files=no | while read stat file;
     do
@@ -138,11 +138,6 @@ function gsplit () {
        fi
     done
 }
-
-# microk8s
-
-alias kubectl='microk8s kubectl'
-alias helm='microk8s helm3'
 
 #gradle
 alias gw=gradle

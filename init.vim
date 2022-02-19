@@ -10,7 +10,7 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "javascript"
+let g:vim_bootstrap_langs = "go,javascript"
 let g:vim_bootstrap_editor = "neovim"				" nvim or vim
 let g:vim_bootstrap_theme = "gruvbox"
 let g:vim_bootstrap_frams = "vuejs"
@@ -89,7 +89,6 @@ Plug 'hrsh7th/nvim-cmp'
 " For vsnip users.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
 
 "*****************************************************************************
 "*****************************************************************************
@@ -541,7 +540,7 @@ lua <<EOF
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  local servers = { 'pyright', 'tsserver' }
+  local servers = { 'pyright', 'tsserver', 'gopls' }
 
     -- Setup lspconfig.
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -562,6 +561,7 @@ let g:ale_fixers = {
       \  '*': ['remove_trailing_lines', 'trim_whitespace'],
       \  'javascript': ['prettier'],
       \  'vue': ['prettier'],
+      \  'go':  ['gofmt'],
       \}
 let g:ale_fix_on_save = 1
 
