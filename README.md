@@ -14,9 +14,6 @@ Install packages:
 sudo pacman -S --needed - < pkglist.txt
 ```
 
-### Windows
-Getting started on [Windows](https://jdhao.github.io/2018/11/15/neovim_configuration_windows/)
-
 
 ## Tutorials
 
