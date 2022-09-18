@@ -16,3 +16,4 @@ yay
 zsh
 fzf
 ripgrep
+lua-language-server

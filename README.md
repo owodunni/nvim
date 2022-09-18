@@ -2,6 +2,7 @@
 How to setup [Neovim](https://neovim.io/)
 
 ## Setup
+My nvim config is based on the following tutorial series [Neovim from scratch](https://youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
 
 Clone repository:
 ```
@@ -14,40 +15,16 @@ Install packages:
 sudo pacman -S --needed - < pkglist.txt
 ```
 
+### LSP
 
-## Tutorials
-
-Great nvim [tutorials.](https://www.gilesorr.com/blog/vim-tips-intro.html)
-
-## Plugins
-
-Install [vim-plug](https://github.com/junegunn/vim-plug):
-```
- curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-Install plugins:
-```
-:PlugInstall
-:UpdateRemotePlugins
-:q!
-```
-
-## Javascript
+*Javascript*
 Install the following
 
 ```
-npm i -g eslint eslint-plugin-vue
+npm i -g eslint eslint-plugin-vue yaml-language-server
 ```
 
-
-## Python
-I followed the following guide for setting up [Python.](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
-
-* <leader>d: go to definition
-* K: check documentation of class or method
-* <leader>n: show the usage of a name in current file
-* <leader>r: rename a name
+To find LSP servers for different languages run `:LSPInstallInfo` also look at [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 
 ## fzf + ripgrep
 FzF and ripgrep promise increased productivity.
