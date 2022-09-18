@@ -46,7 +46,11 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
--- Plugins can have post-install/update hooks
+  -- Colorschemes
+  use "lunarvim/colorschemes"
+  use "folke/tokyonight.nvim"
+
+  -- Plugins can have post-install/update hooks
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 
 	-- Automatically set up your configuration after cloning packer.nvim
