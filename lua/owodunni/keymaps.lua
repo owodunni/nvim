@@ -64,3 +64,6 @@ keymap("v", "p", '"_dP', opts)
 -- Telescope
 keymap("n", "<c-t>", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Null-ls formatting
+keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
