@@ -80,8 +80,13 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
   -- Plugins can have post-install/update hooks
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+
+  use 'owodunni/vim-gitcommit-issue-id'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
