@@ -56,10 +56,10 @@ keymap("v", "p", '"_dP', opts)
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<Left>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<Down>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<Up>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<Right>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 keymap("n", "<leader>t", "<cmd>Telescope find_files<cr>", opts)
