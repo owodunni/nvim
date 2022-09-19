@@ -40,53 +40,56 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+	-- My plugins here
+	use("wbthomason/packer.nvim") -- Have packer manage itself
 
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "windwp/nvim-autopairs"
-  use "kyazdani42/nvim-tree.lua"
+	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("windwp/nvim-autopairs")
+  use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
+	use("nvim-lualine/lualine.nvim")
+  use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
 
-  -- Colorschemes
-  -- use "lunarvim/colorschemes"
-  use "folke/tokyonight.nvim"
+	-- Colorschemes
+	-- use "lunarvim/colorschemes"
+	use("folke/tokyonight.nvim")
 
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp"                  -- The completion plugin
-  use "hrsh7th/cmp-buffer"                -- buffer completions
-  use "hrsh7th/cmp-path"                  -- path completions
-  use "hrsh7th/cmp-cmdline"               -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip"          -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
+	-- cmp plugins
+	use("hrsh7th/nvim-cmp") -- The completion plugin
+	use("hrsh7th/cmp-buffer") -- buffer completions
+	use("hrsh7th/cmp-path") -- path completions
+	use("hrsh7th/cmp-cmdline") -- cmdline completions
+	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lua")
 
-  -- snippets
-  use "L3MON4D3/LuaSnip"                  --snippet engine
-  use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
+	-- snippets
+	use("L3MON4D3/LuaSnip") --snippet engine
+	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
-  -- LSP
-  use "neovim/nvim-lspconfig"             -- enable LSP
-  use "williamboman/nvim-lsp-installer"   -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
+	-- LSP
+	use("neovim/nvim-lspconfig") -- enable LSP
+	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
-  -- Telescope
-  use "nvim-telescope/telescope.nvim"
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-  use "p00f/nvim-ts-rainbow"
+	-- Treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
+	use("p00f/nvim-ts-rainbow")
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
+	-- Git
+	use("lewis6991/gitsigns.nvim")
 
-  -- Plugins can have post-install/update hooks
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+	-- Plugins can have post-install/update hooks
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" })
 
-  use 'owodunni/vim-gitcommit-issue-id'
+	use("owodunni/vim-gitcommit-issue-id")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
