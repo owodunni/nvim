@@ -21,7 +21,7 @@ sudo pacman -S --needed - < pkglist.txt
 Install the following
 
 ```
-npm i -g prettier eslint eslint-plugin-vue yaml-language-server tree-sitter-phpdoc
+npm i -g prettier eslint eslint-plugin-vue yaml-language-server tree-sitter-phpdoc neovim
 ```
 
 ```

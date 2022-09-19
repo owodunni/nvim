@@ -70,3 +70,11 @@ keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Copy paste to system clipboard
+keymap("v", "<leader>p", '"_dp', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("n", "<leader>Y", 'gg"+yG', opts)
+keymap("v", "<leader>d", '"_d', opts)
+keymap("n", "<leader>d", '"_d', opts)
