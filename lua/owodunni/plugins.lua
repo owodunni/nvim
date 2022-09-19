@@ -68,6 +68,9 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"   -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
   -- Plugins can have post-install/update hooks
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 

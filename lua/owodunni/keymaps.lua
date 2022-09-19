@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local erm_opts = { silent = true }
+local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -60,3 +60,7 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Telescope
+keymap("n", "<c-t>", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<c-f>", "<cmd>Telescope live_grep<cr>", opts)
