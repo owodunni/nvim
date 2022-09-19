@@ -14,8 +14,10 @@ null_ls.setup({
     formatting.prettier,
     formatting.eslint,
     formatting.black.with({ extra_args = { "--fast" } }),
+    formatting.shfmt,
     formatting.stylua,
     diagnostics.flake8,
-    diagnostics.eslint
+    diagnostics.eslint,
+    diagnostics.shellcheck
   },
 })

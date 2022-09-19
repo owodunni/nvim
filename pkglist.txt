@@ -17,3 +17,6 @@ zsh
 fzf
 ripgrep
 lua-language-server
+bash-language-server
+shfmt
+shellcheck

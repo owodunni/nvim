@@ -21,7 +21,11 @@ sudo pacman -S --needed - < pkglist.txt
 Install the following
 
 ```
-npm i -g eslint eslint-plugin-vue yaml-language-server tree-sitter-phpdoc
+npm i -g prettier eslint eslint-plugin-vue yaml-language-server tree-sitter-phpdoc
+```
+
+```
+pip install flake8 black
 ```
 
 To find LSP servers for different languages run `:LSPInstallInfo` also look at [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
