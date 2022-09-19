@@ -25,17 +25,15 @@ keymap("n", "<Up>", "<C-w>k", opts)
 keymap("n", "<Right>", "<C-w>l", opts)
 keymap("n", "<Left>", "<C-w>h", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
 -- Resize with arrows
-keymap("n", "<C-k>", ":resize +2<CR>", opts)
-keymap("n", "<C-j>", ":resize -2<CR>", opts)
-keymap("n", "<C-h>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-l>", ":vertical resize +2<CR>", opts)
+keymap("n", "<A-k>", ":resize +2<CR>", opts)
+keymap("n", "<A-j>", ":resize -2<CR>", opts)
+keymap("n", "<A-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-l>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<A-l>", ":bnext<CR>", opts)
-keymap("n", "<A-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-l>", ":bnext<CR>", opts)
+keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -62,8 +60,8 @@ keymap("t", "<Up>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<Right>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap("n", "<leader>t", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>a", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Null-ls formatting
 keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
