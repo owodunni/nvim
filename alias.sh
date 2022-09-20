@@ -139,6 +139,10 @@ function gsplit () {
     done
 }
 
-#gradle
+# gradle
 alias gw=gradle
 alias ll='ls -al'
+
+# Opera
+alias browser='cd $HOME/Work/browser'
+alias wallet='cd $HOME/Work/browser/android/libs/webapp'
