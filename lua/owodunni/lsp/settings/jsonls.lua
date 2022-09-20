@@ -7,6 +7,13 @@ end
 -- Find more schemas here: https://www.schemastore.org/json/
 local schemas = {
   {
+    description = "OpenRpc schema file",
+    fileMatch  = {
+      "*.openrpc.json"
+    },
+    url =  "https://meta.open-rpc.org/"
+  },
+  {
     description = "TypeScript compiler configuration file",
     fileMatch = {
       "tsconfig.json",
