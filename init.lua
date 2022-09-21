@@ -1,20 +1,21 @@
-require "owodunni.options"
-require "owodunni.keymaps"
-require "owodunni.plugins"
-require "owodunni.colorscheme"
-require "owodunni.cmp"
-require "owodunni.lsp"
-require "owodunni.telescope"
-require "owodunni.treesitter"
-require "owodunni.autopairs"
-require "owodunni.nvim-tree"
-require "owodunni.gitsigns"
-require "owodunni.lualine"
-require "owodunni.bufferline"
-require "owodunni.illuminate"
-require "owodunni.indentlint"
-require "owodunni.impatient"
-require "owodunni.toggleterm"
-require "owodunni.dap"
-require "owodunni.alpha"
-require "owodunni.project"
+require("owodunni.options")
+require("owodunni.keymaps")
+require("owodunni.plugins")
+require("owodunni.colorscheme")
+require("owodunni.cmp")
+require("owodunni.lsp")
+require("owodunni.telescope")
+require("owodunni.treesitter")
+require("owodunni.autopairs")
+require("owodunni.nvim-tree")
+require("owodunni.gitsigns")
+require("owodunni.lualine")
+require("owodunni.bufferline")
+require("owodunni.illuminate")
+require("owodunni.indentlint")
+require("owodunni.impatient")
+require("owodunni.toggleterm")
+require("owodunni.dap")
+require("owodunni.alpha")
+require("owodunni.project")
+require("owodunni.comment")
