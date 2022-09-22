@@ -139,6 +139,16 @@ function gsplit () {
     done
 }
 
+function grev () {
+    regex="^(r\/).+"
+    name="$(git rev-parse --abbrev-ref HEAD)"
+    if ! [[ $name =~ $regex ]]; then
+	    name="r/$name"
+	    git branch -m "$name"
+    fi
+    git push --set-upstream critic "$name"
+}
+
 # gradle
 alias gw=gradle
 alias ll='ls -al'
