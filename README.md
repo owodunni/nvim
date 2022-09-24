@@ -25,7 +25,11 @@ npm i -g prettier eslint eslint-plugin-vue yaml-language-server tree-sitter-phpd
 ```
 
 ```
-pip install flake8 black
+pip install flake8 black beancount
+```
+
+```
+cargo install beancount-language-server
 ```
 
 To find LSP servers for different languages run `:LSPInstallInfo` also look at [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
