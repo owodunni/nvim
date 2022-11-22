@@ -2,8 +2,7 @@ autoconf
 automake
 cmake
 htop
-imagewriter
-keepass
+keepassxc
 make
 neovim
 opera
