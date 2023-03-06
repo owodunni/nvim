@@ -107,6 +107,9 @@ return packer.startup(function(use)
 	-- Jest
 	use("kubejm/jest.nvim")
 
+	-- Copilot
+	use("zbirenbaum/copilot.lua")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
