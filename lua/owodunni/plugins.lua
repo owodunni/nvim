@@ -45,18 +45,11 @@ return packer.startup(function(use)
 
   use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-  use("windwp/nvim-autopairs")
   use("kyazdani42/nvim-web-devicons")
   use({ "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" })
-  use("nvim-lualine/lualine.nvim")
-  use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
   use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
   use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
   use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
-  use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-  use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
-  use({ "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" })
-  use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" })
 
   -- Colorschemes
   -- use "lunarvim/colorschemes"
@@ -80,7 +73,6 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim") -- simple to use language server installer
   use("williamboman/mason-lspconfig.nvim")
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-  use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -90,14 +82,12 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   })
-  use("p00f/nvim-ts-rainbow")
+
+  -- Lualine
+  use("nvim-lualine/lualine.nvim")
 
   -- Git
   use("lewis6991/gitsigns.nvim")
-
-  -- Plugins can have post-install/update hooks
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" })
-
   use("owodunni/vim-gitcommit-issue-id")
 
   -- DAP
