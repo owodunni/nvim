@@ -75,9 +75,6 @@ return packer.startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
-  -- Telescope
-  use("nvim-telescope/telescope.nvim")
-
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -101,6 +98,10 @@ return packer.startup(function(use)
 
   -- Copilot
   use("zbirenbaum/copilot.lua")
+
+  -- Navigation
+  use("theprimeagen/harpoon")
+  use("nvim-telescope/telescope.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
