@@ -52,8 +52,9 @@ return packer.startup(function(use)
   use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes"
-  use("folke/tokyonight.nvim")
+  -- use("lunarvim/colorschemes")
+  -- use("folke/tokyonight.nvim")
+  use({"rose-pine/neovim", as = "rose-pine"})
 
   -- cmp plugins
   use("hrsh7th/nvim-cmp") -- The completion plugin
