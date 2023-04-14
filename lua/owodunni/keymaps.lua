@@ -69,6 +69,10 @@ keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- Fugitive
+keymap("n", "<leader>gs", ":Git<cr>", opts)
+keymap("n", "<leader>gb", ":Git blame<cr>", opts)
+
 -- Copy paste to system clipboard
 keymap("v", "<leader>p", '"_dp', opts)
 keymap("v", "<leader>y", '"+y', opts)
