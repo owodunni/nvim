@@ -25,7 +25,7 @@ copilot.setup({
     auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<M-l>",
+      accept = "<leader>ff",
       accept_word = false,
       accept_line = false,
       next = "<M-]>",
