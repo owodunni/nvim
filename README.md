@@ -98,3 +98,15 @@ Ctrl+Y/Ctrl+E - accept/cancel menu
 ```
 
 [More info](https://newbedev.com/select-an-item-in-vim-autocomplete-list-without-inserting-line-break)
+
+## OS shortcuts
+
+To manage windows and virtual desktops we use the following keybindings:
+
+Move to workspace left/right: (GUI+h/l)
+Move window to workspace left/right: (GUI+ALT+H/L)
+Resize window: (GUI+SHIFT+H/J/K/L)
+
+## VIM navigation
+
+Move to next buffer with arrow keys
