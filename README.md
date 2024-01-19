@@ -15,6 +15,11 @@ Install packages:
 sudo pacman -S --needed - < pkglist.txt
 ```
 
+## Fonts
+
+Make sure to install the fonts in the `fonts` folder. I have not managed to find nerd fonts that support all the icons I use.
+But the fonts from the gnome-terminal works well. I think its because they package in all the variants (bold, italic, etc).
+
 ### LSP
 
 *Javascript*
