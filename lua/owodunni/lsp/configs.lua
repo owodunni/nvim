@@ -1,5 +1,5 @@
 local servers = { "jsonls", "yamlls", "tsserver", "vuels", "svelte", "eslint", "tailwindcss", "bashls",
-  "beancount", "cssls", "gopls", "graphql" }
+  "cssls", "gopls", "graphql" }
 
 local settings = {
   ui = {
