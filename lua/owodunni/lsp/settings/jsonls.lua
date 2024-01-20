@@ -39,6 +39,8 @@ local schemas = {
     description = "ESLint config",
     fileMatch = {
       ".eslintrc.json",
+      ".eslintrc.cjs",
+      ".eslintrc.js",
       ".eslintrc",
     },
     url = "https://json.schemastore.org/eslintrc.json",

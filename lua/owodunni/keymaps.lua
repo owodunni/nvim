@@ -63,8 +63,8 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>a", "<cmd>Telescope live_grep<cr>", opts)
 
--- Null-ls formatting
-keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
+-- Conform formatting
+-- keymap("n", "<leader>l", "<cmd>Format<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
