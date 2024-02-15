@@ -104,6 +104,9 @@ return packer.startup(function(use)
   use("theprimeagen/harpoon")
   use("nvim-telescope/telescope.nvim")
 
+  -- Animation
+  use({ 'echasnovski/mini.animate', branch = 'stable' })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
