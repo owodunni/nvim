@@ -25,6 +25,9 @@ keymap("n", "<Up>", "<C-w>k", opts)
 keymap("n", "<Right>", "<C-w>l", opts)
 keymap("n", "<Left>", "<C-w>h", opts)
 
+keymap("n", "<S-l>", "<C-w>l", opts)
+keymap("n", "<S-h>", "<C-w>h", opts)
+
 -- Resize with arrows
 keymap("n", "<A-k>", ":resize +2<CR>", opts)
 keymap("n", "<A-j>", ":resize -2<CR>", opts)
