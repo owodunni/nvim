@@ -97,9 +97,6 @@ return packer.startup(function(use)
   use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
   use({ "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" })
 
-  -- Copilot
-  use("zbirenbaum/copilot.lua")
-
   -- Navigation
   use("theprimeagen/harpoon")
   use("nvim-telescope/telescope.nvim")
