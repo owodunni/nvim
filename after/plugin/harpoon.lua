@@ -2,7 +2,7 @@
 local status_ok, harpoon = pcall(require, "harpoon")
 local status_mark_ok, mark = pcall(require, "harpoon.mark")
 local status_ui_ok, ui = pcall(require, "harpoon.ui")
-if not status_ok or not status_ui_ok or not status_ok then
+if not status_ok or not status_ui_ok or not status_mark_ok then
   return
 end
 
