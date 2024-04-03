@@ -14,9 +14,9 @@ conform.setup({
 	},
 	formatters_by_ft = {
 		javascript = { { "eslint_d", "prettierd" } },
-		typescript = { { "eslint_d", "prettierd" } },
+		typescript = { {"eslint_d", "deno_fmt", "prettierd" } },
 		javascriptreact = { { "eslint_d", "prettierd" } },
-		typescriptreact = { { "eslint_d", "prettierd" } },
+		typescriptreact = { { "eslint_d", "deno_fmt", "prettierd" } },
 		svelte = { { "eslint_d", "prettierd" } },
 		css = { "prettierd" },
 		html = { "prettierd" },

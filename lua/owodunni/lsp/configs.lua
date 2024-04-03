@@ -10,6 +10,8 @@ local servers = {
 	"cssls",
 	"gopls",
 	"graphql",
+	"rust_analyzer",
+	"denols",
 }
 
 local settings = {

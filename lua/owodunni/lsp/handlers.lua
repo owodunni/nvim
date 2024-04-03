@@ -84,6 +84,9 @@ M.on_attach = function(client, bufnr)
 	-- vim.notify(client.name .. " starting...")
 	-- TODO: refactor this into a method that checks if string in list
 	if client.name == "tsserver" then
+    if require("lspconfig").util.root_pattern("deno.json", "deno.jsonc")(vim.fn.getcwd()) then
+        client.stop()
+    end
 		client.server_capabilities.document_formatting = false
 	end
 	lsp_keymaps(bufnr)
