@@ -6,4 +6,3 @@ end
 require "owodunni.lsp.configs"
 require("owodunni.lsp.handlers").setup()
 require "owodunni.lsp.conform"
-require "owodunni.lsp.null-ls"
