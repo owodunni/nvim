@@ -110,6 +110,14 @@ return packer.startup(function(use)
 	-- Journal
 	use({ "renerocksai/telekasten.nvim" })
 	use({ "renerocksai/calendar-vim" })
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

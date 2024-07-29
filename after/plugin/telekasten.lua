@@ -1,9 +1,17 @@
 local status_ok, telekasten = pcall(require, "telekasten")
 if not status_ok then
-  return
+	return
 end
 
-telekasten.setup({home = vim.fn.expand("~/Prog/journal")})
+local home = vim.fn.expand("~/Prog/journal")
+
+telekasten.setup({
+	home = home,
+	-- templates for new notes
+	template_new_note = home .. "/" .. "templates/new_note.md",
+	template_new_daily = home .. "/" .. "templates/new_daily.md",
+	template_new_weekly = home .. "/" .. "templates/weekly_tk.md",
+})
 
 -- Launch panel if nothing is typed after <leader>z
 vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")

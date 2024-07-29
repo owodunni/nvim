@@ -12,6 +12,9 @@ local servers = {
 	"graphql",
 	"rust_analyzer",
 	"denols",
+  "templ",
+  "htmx",
+  "html"
 }
 
 local settings = {
