@@ -1,33 +1,24 @@
 local servers = {
+  "astro",
 	"jsonls",
 	"yamlls",
-	"tsserver",
-	"vuels",
+	"ts_ls",
 	"svelte",
-	"eslint",
 	"tailwindcss",
 	"bashls",
-	"cssls",
 	"gopls",
-	"graphql",
-	"rust_analyzer",
-	"denols",
-  "templ",
-  "htmx",
-  "html"
+	"html",
 }
 
-local settings = {
-	ui = {
-		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
-		},
-	},
-}
-
-require("mason").setup(settings)
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
@@ -57,6 +48,7 @@ for _, server in pairs(servers) do
 	server = vim.split(server, "@")[1]
 
 	local has_custom_opts, server_custom_opts = pcall(require, "owodunni.lsp.settings." .. server)
+
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
 	end

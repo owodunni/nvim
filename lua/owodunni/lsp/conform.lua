@@ -10,14 +10,14 @@ conform.setup({
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "black" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "eslint_d", "prettierd" } },
+		javascript = { { "eslint", "prettierd" } },
 	},
 	formatters_by_ft = {
-		javascript = { { "eslint_d", "prettierd" } },
-		typescript = { {"eslint_d", "deno_fmt", "prettierd" } },
-		javascriptreact = { { "eslint_d", "prettierd" } },
-		typescriptreact = { { "eslint_d", "deno_fmt", "prettierd" } },
-		svelte = { { "eslint_d", "prettierd" } },
+		javascript = { { "eslint" } },
+		typescript = { {"eslint" } },
+		javascriptreact = { { "eslint" } },
+		typescriptreact = { { "eslint" } },
+		svelte = { { "eslint" } },
 		css = { "prettierd" },
 		html = { "prettierd" },
 		json = { "prettierd" },

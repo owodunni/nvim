@@ -105,7 +105,7 @@ return packer.startup(function(use)
 	use({ "echasnovski/mini.animate", branch = "stable" })
 
 	-- LLM
-	use({ "robitx/gp.nvim" })
+  use({ "olimorris/codecompanion.nvim" })
 
 	-- Journal
 	use({ "renerocksai/telekasten.nvim" })
