@@ -6,18 +6,11 @@ end
 
 conform.setup({
 	formatters_by_ft = {
-		lua = { "stylua" },
-		-- Conform will run multiple formatters sequentially
-		python = { "isort", "black" },
-		-- Use a sub-list to run only the first available formatter
-		javascript = { { "eslint", "prettierd" } },
-	},
-	formatters_by_ft = {
-		javascript = { { "eslint" } },
-		typescript = { {"eslint" } },
-		javascriptreact = { { "eslint" } },
-		typescriptreact = { { "eslint" } },
-		svelte = { { "eslint" } },
+		javascript = { "eslint", "prettierd", stop_after_first=true },
+		typescript = { "eslint" },
+		javascriptreact = { "eslint" },
+		typescriptreact = { "eslint" },
+		svelte = { "eslint" },
 		css = { "prettierd" },
 		html = { "prettierd" },
 		json = { "prettierd" },
@@ -25,7 +18,7 @@ conform.setup({
 		markdown = { "prettierd" },
 		graphql = { "prettierd" },
 		lua = { "stylua" },
-		python = { "isort", "black" },
+		python = { "isort", "black", stop_after_first=true },
 	},
 })
 
